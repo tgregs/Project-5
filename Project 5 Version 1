@@ -1,0 +1,76 @@
+String author = "Trevor Gregory";
+float x,y;
+Person[] human= new Person[family];
+int many = 8;
+int last;
+float human;
+
+void setup(){
+
+ size(800,600);
+ 
+}
+
+void draw(){
+  scene();
+ // for (int i =0; c<=4; c++){
+
+}
+
+void scene(){
+ background(135,206,235);
+ rect(0,height/1.5,width,height);
+ 
+ 
+}  
+
+void tall(){
+ // Move tallest to the end
+ // Find index of tallest, change Xperson to Xperson of last.
+ int k=0;
+ for(int i=1; i<many; i++){
+   if(human[i].big > human[k].big) k=i;
+ }
+swap (human,k,last);
+
+last = k;
+
+//void swap(Person human[],
+//save=human[k].personX;
+//human[k].Xperson = human[last].Xperson;
+//human[last].Xperson = save;
+// 
+//} 
+
+
+class human{
+
+float lb, ht;
+float r,g,b;
+float Xperson, Yperson;
+float w;
+// Constructor
+Person(float ht){
+Xperson = ht + random(20,40);
+Yperson = random(50,150);
+w = random(20,60);
+r = random(255);
+g = random(255);
+b = random(255);
+}
+
+void showPerson(){
+  
+fill(r,g,b);
+rect(Xperson,400,w,-big);
+
+
+}
+
+
+void keyPressed(){
+ 
+ if(key=='t') tall();
+  
+  
+}
